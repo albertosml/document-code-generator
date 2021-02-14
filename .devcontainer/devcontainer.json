@@ -1,0 +1,14 @@
+{
+    "name": "Extension development",
+    "image": "node:alpine3.12",
+    "workspaceFolder": "/usr/src/app",
+    "workspaceMount": "source=${localWorkspaceFolder},target=/usr/src/app,type=bind,consistency=cached",
+    "runArgs": ["-u", "node"],
+    "postCreateCommand": "yarn install",
+    "extensions": [
+        "dbaeumer.vscode-eslint",
+        "eamodio.gitlens",
+        "eamodio.tsl-problem-matcher",
+        "rvest.vs-code-prettier-eslint"
+    ],
+}

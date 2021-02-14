@@ -1,0 +1,43 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+        {
+            "label": "Watch code",
+            "type": "npm",
+            "script": "watch",
+            "problemMatcher": [
+                "$ts-webpack-watch",
+                "$tslint-webpack-watch"
+            ],
+            "isBackground": true,
+            "presentation": {
+                "reveal": "never"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "type": "npm",
+            "script": "test-watch",
+            "problemMatcher": "$tsc-watch",
+            "isBackground": true,
+            "presentation": {
+                "reveal": "never"
+            },
+            "group": "build"
+        },
+        {
+            "label": "Compile code",
+            "type": "npm",
+            "script": "compile",
+            "group": "build"
+        },
+        {
+            "label": "Test code",
+            "type": "npm",
+            "script": "test"
+        }
+    ]
+}
