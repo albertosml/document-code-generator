@@ -2,7 +2,7 @@
 	"name": "document-code-generator",
 	"displayName": "Document Code Generator",
 	"description": "VSCode extension that generates documentation for your code automatically",
-	"version": "0.0.0",
+	"version": "0.1.0",
 	"engines": {
 		"vscode": "^1.52.0"
 	},
@@ -10,14 +10,14 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onCommand:document-code-generator.initialRelease"
+		"onCommand:document-code-generator.updateExtensionVersion"
 	],
 	"main": "./dist/extension.js",
 	"contributes": {
 		"commands": [
 			{
-				"command": "document-code-generator.initialRelease",
-				"title": "Initial release"
+				"command": "document-code-generator.updateExtensionVersion",
+				"title": "Update extension version"
 			}
 		]
 	},
@@ -30,22 +30,21 @@
 		"test-watch": "tsc -watch -p ./",
 		"pretest": "yarn run test-compile && yarn run lint",
 		"lint": "eslint src --ext ts",
-		"test": "node ./out/test/runTest.js"
+		"test": "jest out/"
 	},
 	"devDependencies": {
-		"@types/glob": "^7.1.3",
-		"@types/mocha": "^8.0.4",
+		"@types/jest": "^26.0.20",
 		"@types/node": "^12.11.7",
-		"@types/vscode": "^1.52.0",
 		"@typescript-eslint/eslint-plugin": "^4.14.1",
 		"@typescript-eslint/parser": "^4.14.1",
 		"eslint": "^7.19.0",
-		"glob": "^7.1.6",
-		"mocha": "^8.2.1",
 		"ts-loader": "^8.0.14",
 		"typescript": "^4.1.3",
-		"vscode-test": "^1.5.0",
 		"webpack": "^5.21.2",
 		"webpack-cli": "^4.4.0"
+	},
+	"dependencies": {
+		"jest": "^26.6.3",
+		"vscode": "^1.1.37"
 	}
 }
