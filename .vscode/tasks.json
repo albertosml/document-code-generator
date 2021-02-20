@@ -37,7 +37,8 @@
         {
             "label": "Test code",
             "type": "npm",
-            "script": "test"
+            "script": "test",
+            "problemMatcher": []
         }
     ]
 }
