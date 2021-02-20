@@ -22,7 +22,7 @@ jobs:
           - 10
           - 12
           - 14
-          - latest
+          - 15
     
     name: Testing in Node ${{ matrix.node_version }} on ${{ matrix.os }}
     
